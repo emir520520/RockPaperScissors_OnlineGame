@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Yuxiao Fang</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+	<h1>Rock Paper Scissors Game</h1>
+	<section id="S">
+		<div id="div1">
+			<p id="p1">PRESS ANY OF THESE THREE BUTTON(NOT QUIT) TO START</p>
+			<div id="divB">
+				<button id="b1" onClick="B(1)">Rock</button>
+				<button id="b2" onClick="B(2)">Paper</button>
+				<button id="b3" onClick="B(3)">Scissors</button>
+				<button id="bq" onClick="B(4)">Quit</button>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div id="div2">
+			<p id="yourScore">Your Score is:</p>
+			<p id="computerScore">Computer Score is:</p>
+			<p id="yourP"></p>
+			<p id="computerP"><p>
+			<div id="cq">
+				<div ID="p1">You</div>
+				<div id="P2">Computer</div>
+			</div>
+			<br>
+			<p id="final"></p>
+		</div>
+	</section>
+	
+	<script>
+		var yourScore=0, computerScore=0;
+		var ys=document.getElementById("yourScore");
+		var cs=document.getElementById("computerScore");
+		var you=document.getElementById("yourP");
+		var computer =document.getElementById("computerP");
+		var F=document.getElementById("final");
+		var b1=document.getElementById("b1");
+		var b2=document.getElementById("b2");
+		var b3=document.getElementById("b3");
+		var b4=document.getElementById("b4");
+		var fs="";
+		var t;
+		
+		function B(x){
+			if(x==1){
+				t=Math.floor((Math.random()*3)+1);
+				if(t==1){
+					yourScore=yourScore+0;
+					computerScore=computerScore+0;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='./images/rock.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='./images/rock.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}else if(t==2){
+					yourScore=yourScore+0;
+					computerScore=computerScore+1;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='./images/rock.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='./images/paper.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}else{
+					yourScore=yourScore+1;
+					computerScore=computerScore+0;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='./images/rock.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='./images/scissors.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}
+			}else if(x==2){
+				t=Math.floor((Math.random()*3)+1);
+				if(t==1){
+					yourScore=yourScore+1;
+					computerScore=computerScore+0;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='images/paper.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='images/rock.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}else if(t==2){
+					yourScore=yourScore+0;
+					computerScore=computerScore+0;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='images/paper.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='images/paper.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}else{
+					yourScore=yourScore+0;
+					computerScore=computerScore+1;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='images/paper.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='./images/scissors.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}
+			}else if(x==3){
+				t=Math.floor((Math.random()*3)+1);
+				if(t==1){
+					yourScore=yourScore+1;
+					computerScore=computerScore+0;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='./images/scissors.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='./images/rock.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}else if(t==2){
+					yourScore=yourScore+0;
+					computerScore=computerScore+0;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='./images/scissors.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='./images/paper.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}else{
+					yourScore=yourScore+0;
+					computerScore=computerScore+1;
+					y="<img style='position:fixed; top:610px; left:230px; width:50px; height:50px;' src='./images/scissors.png'>";
+					z="<img style='position:fixed; top:610px; left:1100px; width:50px; height:50px;' src='./images/scissors.png'>";
+					ys.innerHTML="Your Score is: "+yourScore;
+					cs.innerHTML="Computer Score is "+computerScore;
+					you.innerHTML=y;
+					computer.innerHTML=z;
+				}
+			}else if(x==4){
+				b1.disabled=true;
+				b2.disabled=true;
+				b3.disabled=true;
+				var F=document.getElementById("final");
+				
+				if(yourScore<computerScore){
+					fs="You lost this game.  Good luck next time!";
+					F.style.color="blue";
+				}else if(yourScore==computerScore){
+					fs="TIE!!! You can win next time";
+					F.style.color="green";
+				}else{
+					fs="Yaah! You win this game!!!";
+					F.style.color="yellow";
+				}
+				
+				F.innerHTML=fs;
+				return;
+			}	
+		}
+				
+	</script>
+</body>
+</html>
